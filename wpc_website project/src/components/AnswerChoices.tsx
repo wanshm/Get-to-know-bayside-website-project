@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import AnswerChoice from './mcqType/AnswerChoice';
 
 interface AnswerChoiceProps {
   choices: string[];
@@ -6,26 +7,12 @@ interface AnswerChoiceProps {
 }
 
 export default function AnswerChoices(props: AnswerChoiceProps) {
-  const [off, setOff] = useState(false);
-
-  const handleOnClick = () => {
-    setOff(true);
-  };
-
   return (
     <div>
       {props.choices.map((choice, i) => {
         return (
-          <button
-            key={i}
-            onClick={() => {
-              handleOnClick();
-            }}
-            className={off ? (i == props.answer ? 'right' : 'wrong') : ''}
-            disabled={off}
-          >
-            {choice}
-          </button>
+          //DO some work on getting each QUESTION separate, so their answers dont show 
+          <AnswerChoice key={i} choice={choice} index={i} answer={props.answer}/>
         );
       })}
     </div>

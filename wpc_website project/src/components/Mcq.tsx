@@ -7,19 +7,17 @@ export interface McqDataProps {
     choices: string[];
     imgsrc?: string;
   }[];
+  index : number;
 }
 
 export default function Mcq(props: McqDataProps) {
+  const q = props.data[props.index]
   return (
     <div>
-      {props.data.map((q, i) => {
-        return (
-          <div key={i}>
+          <div>
             <h2>{q.question}</h2>
             <AnswerChoices choices={q.choices} answer={q.answer} />
           </div>
-        );
-      })}
     </div>
   );
 }
