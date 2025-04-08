@@ -1,22 +1,17 @@
-
-import './App.css'
-
-interface McqDataProps {
-  question : string;
-  answer : number; 
-  choices : string[];
-  imgsrc ? : string;
-}
+import './App.css';
+import mcqData from './assets/mcqData.json';
+import Mcq from './components/Mcq';
+import { McqDataProps } from './components/Mcq';
 
 function App() {
-
-  const mcqData:McqDataProps[] = [{question: "1+1 = ", answer : 0, choices : ["2", "b", "5", "fishy"]}]
+  //sample data for testing features...
+  const d: McqDataProps = mcqData;
 
   return (
     <>
-      
+      <Mcq data={d.data} />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
