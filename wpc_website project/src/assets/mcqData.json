@@ -1,0 +1,10 @@
+{
+  "data": [
+    { "question": "1+1 = ?", "answer": 0, "choices": ["2", "b", "5", "fishy"] },
+    {
+      "question": "who is a math teacher?",
+      "answer": 3,
+      "choices": ["Mrs. Hudson", "Mr. Herman", "Mr. Boccuzza", "Mrs. Aminov"]
+    }
+  ]
+}
