@@ -1,28 +1,21 @@
-import { useState } from "react";
-
 interface AnswerChoiceProps {
-    choice: string;
-    answer: number;
-    index: number;
-  }
+  choice: string;
+  answer: number;
+  index: number;
+  off: boolean;
+  onClick: () => void;
+}
 
-export default function AnswerChoice (props :AnswerChoiceProps) {
-    const [off, setOff] = useState<boolean>(false);
-    
-      const handleOnClick = () => {
-        setOff(true);
-      };
-    
-    return (
-        <button
-          onClick={() => {
-            handleOnClick();
-          }}
-          className={off ? (props.index == props.answer ? "right" : "wrong") : ""}
-          disabled={off}
-        >
-          {props.choice}
-        </button>
-      );
-
+export default function AnswerChoice(props: AnswerChoiceProps) {
+  return (
+    <button
+      onClick={() => props.onClick()}
+      className={
+        props.off ? (props.index == props.answer ? 'right' : 'wrong') : ''
+      }
+      disabled={props.off}
+    >
+      {props.choice}
+    </button>
+  );
 }

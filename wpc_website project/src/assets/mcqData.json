@@ -1,9 +1,8 @@
 [
-    { "question": "1+1 = ?", "answer": 0, "choices": ["2", "b", "5", "fishy"] },
-    {
-      "question": "who is a math teacher?",
-      "answer": 3,
-      "choices": ["Mrs. Hudson", "Mr. Herman", "Mr. Boccuzza", "Mrs. Aminov"]
-    }
-  ]
-
+  { "question": "1+1 = ?", "answer": 0, "choices": ["2", "4", "5", "3"] },
+  {
+    "question": "who is a math teacher?",
+    "answer": 3,
+    "choices": ["Mrs. Hudson", "Mr. Herman", "Mr. Boccuzza", "Mrs. Aminov"]
+  }
+]
