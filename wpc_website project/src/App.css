@@ -40,3 +40,15 @@
 .read-the-docs {
   color: #888;
 } */
+
+/*
+right and wrong states for the multiple choice buttons
+*/
+
+.right {
+  background-color: lightgreen;
+}
+
+.wrong {
+  background-color: orangered;
+}
