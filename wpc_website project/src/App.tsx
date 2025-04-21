@@ -1,14 +1,15 @@
 import './App.css';
-import mcqData from './assets/mcqData.json';
-import Mcq from './components/mcqType/Mcq';
+import { Link } from 'react-router';
+
+//Home Page
 
 function App() {
   //sample data for testing features...
-  const d = mcqData;
 
   return (
     <>
-      <Mcq data={d} />
+    
+    <Link to={"/Mcq"}>Mcq Quiz</Link>
     </>
   );
 }
