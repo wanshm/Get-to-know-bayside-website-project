@@ -4,6 +4,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router'
 import './index.css'
 import App from './App.tsx'
 import McqQuiz from './pages/McqQuiz.tsx'
+import NamingQuiz from './pages/NamingQuiz.tsx'
 
 const router = createBrowserRouter([{
   path:"/",
@@ -11,6 +12,9 @@ const router = createBrowserRouter([{
 },{
   path:"/mcq",
   element: <McqQuiz/>
+},{
+  path:"/naming",
+  element: <NamingQuiz/>
 }])
 
 createRoot(document.getElementById('root')!).render(

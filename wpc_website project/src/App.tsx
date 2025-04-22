@@ -10,6 +10,7 @@ function App() {
     <>
     
     <Link to={"/Mcq"}>Mcq Quiz</Link>
+    <Link to={"/Naming"}>Naming Quiz</Link>
     </>
   );
 }
