@@ -8,19 +8,19 @@ export default function Naming() {
 
   function won() {
     let count = 0;
-    answers.forEach((answer,i) => {
-      if (revealed[i] == true) {
+    revealed.forEach((r) => {
+      if (r == true) {
         count++;
       }
     });
     return count == answers.length;
   }
 
-  function toNameCase(name: string) {
-    const fL = name.substring(0, 1).toUpperCase();
-    const rest = name.substring(1).toLowerCase();
-    return fL + rest;
-  }
+  // function toNameCase(name: string) {
+  //   const fL = name.substring(0, 1).toUpperCase();
+  //   const rest = name.substring(1).toLowerCase();
+  //   return fL + rest;
+  // }
 
   function handleOnChange(e: React.ChangeEvent<HTMLInputElement>) {
     setInput(e.target.value);
