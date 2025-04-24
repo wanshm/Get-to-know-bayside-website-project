@@ -8,9 +8,8 @@ function App() {
 
   return (
     <>
-    
-    <Link to={"/Mcq"}>Mcq Quiz</Link>
-    <Link to={"/Naming"}>Naming Quiz</Link>
+      <Link to={'/Mcq'}>Mcq Quiz</Link>
+      <Link to={'/Naming'}>Naming Quiz</Link>
     </>
   );
 }

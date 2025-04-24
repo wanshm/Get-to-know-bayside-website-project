@@ -66,9 +66,3 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 } */
-
-#mcq{
-  border: solid 1px black;
-  border-radius: 15px;
-  padding: 25px;
-}
