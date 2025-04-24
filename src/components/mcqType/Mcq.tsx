@@ -33,7 +33,7 @@ export default function Mcq(props: McqDataProps) {
     setOff(copy);
   };
   return (
-    <div>
+    <div id='mcq'>
       <div>
         <h2>Question {index + 1}:</h2>
         <h2>{q.question}</h2>

@@ -6,7 +6,12 @@ export default function McqQuiz(){
   const d = mcqData;
     return(
         <>
-        <Link to={"/"}>Home</Link>
+        <nav>
+          <Link to={"/"}>Home</Link>
+          <input type="text" placeholder="Search..."/>
+          <button>Search</button>
+        </nav>
+        <h2>Quiz Title</h2>
         <Mcq data={d}/>
         </>
     )
