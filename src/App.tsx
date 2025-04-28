@@ -1,12 +1,21 @@
-import React, { useState } from 'react';
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
-import Header from './Main Page/Header.tsx';
 import './App.css';
+import { Link } from 'react-router';
+import Header from "./components/main/Header";
+import "./components/main/header.css";
 
-const pages = [
-  { title: 'Multiple Choice Quiz', path: '/multiple-choice' },
-  { title: 'Clicking Quiz', path: '/clicking-quiz' }
-];
+// const pages = [
+//   { title: 'Multiple Choice Quiz', path: '/multiple-choice' },
+//   { title: 'Clicking Quiz', path: '/clicking-quiz' }
+// ];
+
+
+  // const [searchTerm, setSearchTerm] = useState('');
+
+  // const filteredPages = pages.filter(page =>
+  //   page.title.toLowerCase().includes(searchTerm.toLowerCase())
+  // );
+
+//Home Page
 
 function Gallery({ data }: { data: { title: string; path: string }[] }) {
   return (
@@ -20,44 +29,30 @@ function Gallery({ data }: { data: { title: string; path: string }[] }) {
   );
 }
 
-function MultipleChoiceQuiz() {
-  return <div>This is the Multiple Choice Quiz page!</div>;
-}
-
-function ClickingQuiz() {
-  return <div>This is the Clicking Quiz page!</div>;
-}
-
 function App() {
-  const [searchTerm, setSearchTerm] = useState('');
-
-  const filteredPages = pages.filter(page =>
-    page.title.toLowerCase().includes(searchTerm.toLowerCase())
-  );
+  //sample data for testing features...
 
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={
-          <div className="main-page">
-            <Header />
-            <div className="search-container">
-              <input
-                type="text"
-                placeholder="Search pages..."
-                value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
-                className="search"
-              />
-            </div>
-            <Gallery data={filteredPages} />
-          </div>
-        } />
-        <Route path="/multiple-choice" element={<MultipleChoiceQuiz />} />
-        <Route path="/clicking-quiz" element={<ClickingQuiz />} />
-      </Routes>
-    </Router>
+    <>
+    <div className="main-page">
+      <Header />
+      <div className="search-container">
+        <input
+          type="text"
+          placeholder="Search pages..."
+          // value={searchTerm}
+          // onChange={(e) => setSearchTerm(e.target.value)}
+          className="search"
+        />
+      </div>
+      {/* <Gallery data={filteredPages} /> */}
+    </div>
+    
+    <Link to={"/Mcq"}>Mcq Quiz</Link>
+    <Link to={"/Naming"}>Naming Quiz</Link>
+    </>
   );
 }
 
 export default App;
+
