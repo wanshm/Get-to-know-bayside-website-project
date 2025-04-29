@@ -1,35 +1,46 @@
 {
     "mcqData":[
         {
-          "title": "Placeholder Quiz",
+          "title": "Quiz 1",
           "questions": [
-            { "question": "1+1 = ?", "answer": 1, "choices": ["2", "4", "5", "3"] },
+            { "question": "How many students attend bayside high school?", "answer": 4, "choices": ["1500", "4000", "2995", "3010"] },
             {
-              "question": "who is a math teacher?",
+              "question": "who is a math teacher at Bayside High School?",
               "answer": 3,
               "choices": ["Mrs. Hudson", "Mr. Herman", "Mr. Boccuzza", "Mrs. Aminov"]
             }
           ]
         },
         {
-          "title": "Placeholder Quiz 2",
+          "title": " Quiz 2",
           "questions": [
-            { "question": "1+1 = ?", "answer": 1, "choices": ["2", "4", "5", "3"] },
+            { "question": "What is the adress of Bayside High school?", "answer": 1, "choices": ["32-24 Corporal Kennedy Street", "33-208 Kennedy Street ", "Corpral Kennedy Street and next to the highway", "208-07 32nd Avenue"] },
             {
-              "question": "who is a math teacher?",
-              "answer": 3,
-              "choices": ["Mrs. Hudson", "Mr. Herman", "Mr. Boccuzza", "Mrs. Aminov"]
+              "question": "who is a social studies teacher?",
+              "answer": 2,
+              "choices": ["Mrs. Fox", "Ms. McNamara", "Mr. Alverio", "Mr. Ban"]
             }
           ]
         },
         {
-          "title": "Placeholder Quiz 3",
+          "title": "Quiz 3",
           "questions": [
-            { "question": "1+1 = ?", "answer": 1, "choices": ["2", "4", "5", "3"] },
+            { "question": "What signed MTA bus routes stop at Bayside High School", "answer": 4, "choices": ["Q28 and Q31 only", "Q97, Q66 and Q23", "Q28, Q31 and Q76", "Q77, Q32 and Q29"] },
             {
-              "question": "who is a math teacher?",
+              "question": "who is the teacher that runs the SPARK program at Bayside High school?",
+              "answer": 4,
+              "choices": ["Mrs. Bensley", "Mr. Seidita", "Mr. Joeseph", "Mrs. Jaxen"]
+            }
+          ]
+        },
+        {
+          "title": "Quiz 4",
+          "questions": [
+            { "question": "What is the park directly across Bayside High School called?", "answer": 2, "choices": ["Raymend O'Con Park", "Raymond O'Connor Park", "Connor O'Raymond Park", "Bayside Fields"] },
+            {
+              "question": "who is the Principal of Bayside High School?",
               "answer": 3,
-              "choices": ["Mrs. Hudson", "Mr. Herman", "Mr. Boccuzza", "Mrs. Aminov"]
+              "choices": ["Mrs. Martinez", "Mr. Belinfanti", "Mr. Ball", "Mrs. Chu-Choy"]
             }
           ]
         }
