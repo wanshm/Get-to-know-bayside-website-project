@@ -1,24 +1,19 @@
-import React, { useState, useEffect } from 'react';
-import './header.css';
-
+import'./header.css';
 export default function Header() {
-  const [isPaused, setIsPaused] = useState(false);
-
   return (
-    <div id="banner" className="container center">
-      <div className="marquee-container" role="presentation">
-        <div className={`marquee-content ${isPaused ? 'paused' : ''}`}>
-          <p>Get To Know Bayside High School!</p>
-        </div>
-        <div className="marquee-controls">
-          <button 
-            onClick={() => setIsPaused(!isPaused)}
-            aria-label={isPaused ? "Resume scrolling" : "Pause scrolling"}
-          >
-            {isPaused ? "Play" : "Pause"}
-          </button>
-        </div>
+    <header className="header">
+      <div className="header-title">
+        <h1><span className="highlight">Get To know</span>Bayside!</h1>
       </div>
-    </div>
+      <nav className="nav-links">
+        <a href="#">Quiz Types:</a>
+        <a href="#">Multiple Choice</a>
+        <a href="#">Clicking</a>
+        <a href="#">Naming</a>
+      </nav>
+      <div className="search-container">
+        <input type="text" placeholder="Search quiz type" />
+      </div>
+    </header>
   );
 }

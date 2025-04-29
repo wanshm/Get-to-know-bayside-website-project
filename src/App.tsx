@@ -1,58 +1,81 @@
+import React, { useState } from 'react';
+import Header from './Header';
+import Footer from './Footer';
+import MultipleChoiceQuiz from './pages/McqQuiz';
+import ClickingQuiz from './pages/NamingQuiz';
+import NamingQuiz from './pages/NamingQuiz';
 import './App.css';
-import { Link } from 'react-router';
-import Header from "./components/main/Header";
-import "./components/main/header.css";
-
-// const pages = [
-//   { title: 'Multiple Choice Quiz', path: '/multiple-choice' },
-//   { title: 'Clicking Quiz', path: '/clicking-quiz' }
-// ];
 
 
-  // const [searchTerm, setSearchTerm] = useState('');
 
-  // const filteredPages = pages.filter(page =>
-  //   page.title.toLowerCase().includes(searchTerm.toLowerCase())
-  // );
 
-//Home Page
+export default function App() {
+  const [currentPage, setCurrentPage] = useState('home');
+  const [searchTerm, setSearchTerm] = useState('');
 
-function Gallery({ data }: { data: { title: string; path: string }[] }) {
-  return (
-    <div className="gallery">
-      {data.map((page) => (
-        <div key={page.path} className="gallery-item">
-          <Link to={page.path}>{page.title}</Link>
+
+
+
+  function handleSearch(e: React.FormEvent) {
+    e.preventDefault();
+    const term = searchTerm.toLowerCase();
+    if (term.includes('multiple')) setCurrentPage('multiple');
+    else if (term.includes('clicking')) setCurrentPage('clicking');
+    else if (term.includes('naming')) setCurrentPage('naming');
+    else alert('Quiz not found.');
+  }
+
+
+
+
+  function renderPage() {
+    if (currentPage === 'multiple') return <MultipleChoiceQuiz />;
+    if (currentPage === 'clicking') return <ClickingQuiz />;
+    if (currentPage === 'naming') return <NamingQuiz />;
+
+
+
+
+    // default = homepage
+    return (
+      <div className="home">
+        <h2>Welcome to Bayside High School Quizzes!</h2>
+
+
+
+
+        <form onSubmit={handleSearch} className="search-bar">
+          <input
+            type="text"
+            placeholder="Search for a quiz..."
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
+          />
+          <button type="submit">Search</button>
+        </form>
+
+
+
+
+        <div className="quiz-buttons">
+          <button onClick={() => setCurrentPage('multiple')}>Multiple Choice</button>
+          <button onClick={() => setCurrentPage('clicking')}>Clicking Quiz</button>
+          <button onClick={() => setCurrentPage('naming')}>Naming Quiz</button>
         </div>
-      ))}
-    </div>
-  );
-}
+      </div>
+    );
+  }
 
-function App() {
-  //sample data for testing features...
+
+
 
   return (
-    <>
-    <div className="main-page">
+    <div className="App">
       <Header />
-      <div className="search-container">
-        <input
-          type="text"
-          placeholder="Search pages..."
-          // value={searchTerm}
-          // onChange={(e) => setSearchTerm(e.target.value)}
-          className="search"
-        />
-      </div>
-      {/* <Gallery data={filteredPages} /> */}
+      {renderPage()}
+      <Footer />
     </div>
-    
-    <Link to={"/Mcq"}>Mcq Quiz</Link>
-    <Link to={"/Naming"}>Naming Quiz</Link>
-    </>
   );
 }
 
-export default App;
 

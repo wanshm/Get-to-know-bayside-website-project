@@ -1,50 +1,58 @@
-.center{
-    justify-content: center;
-    align-items: center;
+.header {
+  background-color: #1e3d8f;
+  color: white;
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  position: relative;
 }
 
-#banner{
-    background-image: linear-gradient(to bottom right, blue, orange);
-    color: white;
-    padding: 10px;
+
+.header-title h1 {
+  font-size: 24px;
+  margin: 0;
+  color: orange;
 }
 
-.marquee-container {
-    position: relative;
-    overflow: hidden;
-    width: 100%;
+
+.header-title .highlight {
+  color: white;
 }
 
-.marquee-content {
-    display: inline-block;
-    animation: scroll 15s linear infinite;
+
+.nav-links {
+  display: flex;
+  gap: 15px;
+  font-weight: bold;
+  margin: 10px 0;
+  flex-wrap: wrap;
 }
 
-.marquee-content-paused{
-    animation-play-state: paused;
+
+.nav-links a {
+  color: orange;
+  text-decoration: none;
 }
 
-.marquee-controls{
-    position: absolute;
-    right: 10 px;
-    top: 50%;
-    transform: translate(-50%);
+
+.nav-links a:first-child {
+  color: white;
 }
 
-.marquee-controls button {
-    background: rgba(255, 255, 255, 0.2);
-    border: 1px solid white;
-    color: white;
-    padding: 5px 10px;
-    cursor: pointer;
-    border-radius: 4px;
-  }
-  
-  @keyframes scroll {
-    from {
-      transform: translateX(100%);
-    }
-    to {
-      transform: translateX(-100%);
-    }
-  }
+
+.search-container {
+  background-color: white;
+  border-radius: 6px;
+  padding: 2px 8px;
+  display: flex;
+  align-items: center;
+}
+
+
+.search-container input {
+  border: none;
+  outline: none;
+  font-size: 14px;
+}
