@@ -14,7 +14,7 @@
         {
           "title": " Quiz 2",
           "questions": [
-            { "question": "What is the adress of Bayside High school?", "answer": 1, "choices": ["32-24 Corporal Kennedy Street", "33-208 Kennedy Street ", "Corpral Kennedy Street and next to the highway", "208-07 32nd Avenue"] },
+            { "question": "What is the address of Bayside High school?", "answer": 1, "choices": ["32-24 Corporal Kennedy Street", "33-208 Kennedy Street ", "Corporal Kennedy Street and next to the highway", "208-07 32nd Avenue"] },
             {
               "question": "who is a social studies teacher?",
               "answer": 2,
