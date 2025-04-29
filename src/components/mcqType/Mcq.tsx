@@ -38,7 +38,7 @@ export default function Mcq(props: McqDataProps) {
         <h2>Question {index + 1}:</h2>
         <h2>{q.question}</h2>
 
-        <div>
+        <div id='buttonPanel'>
           {q.choices.map((choice, i) => {
             return (
               <AnswerChoice
@@ -54,22 +54,26 @@ export default function Mcq(props: McqDataProps) {
         </div>
       </div>
 
-      <button
-        disabled={index == 0}
-        onClick={() => {
-          handleLeft();
-        }}
-      >
-        &larr;
-      </button>
-      <button
-        disabled={index == props.data.length - 1}
-        onClick={() => {
-          handleRight();
-        }}
-      >
-        &rarr;
-      </button>
+      <div className='arrowButtons'>
+        <button
+          className='arrowButton'
+          disabled={index == 0}
+          onClick={() => {
+            handleLeft();
+          }}
+        >
+          &larr;
+        </button>
+        <button
+          className='arrowButton'
+          disabled={index == props.data.length - 1}
+          onClick={() => {
+            handleRight();
+          }}
+        >
+          &rarr;
+        </button>
+      </div>
     </div>
   );
 }
