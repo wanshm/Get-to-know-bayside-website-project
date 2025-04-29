@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
-import Header from './Header';
-import Footer from './Footer';
+import Header from './components/main/Header';
+import footer from './components/main/footer';
 import MultipleChoiceQuiz from './pages/McqQuiz';
 import ClickingQuiz from './pages/NamingQuiz';
 import NamingQuiz from './pages/NamingQuiz';
 import './App.css';
+
 
 
 
@@ -73,9 +74,10 @@ export default function App() {
     <div className="App">
       <Header />
       {renderPage()}
-      <Footer />
+      <footer />
     </div>
   );
 }
+
 
 
