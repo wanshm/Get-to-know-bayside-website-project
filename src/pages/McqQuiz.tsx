@@ -1,35 +1,10 @@
-import Mcq from '../components/mcqType/Mcq';
-import mcqData from '../assets/mcqData.json';
+import quizData from '../assets/quizData.json';
 import { Link } from 'react-router';
-import { useSearchParams } from 'react-router';
-import { useEffect, useState } from 'react';
-
-interface QuestionDataProps {
-  question: string;
-  answer: number;
-  choices: string[];
-}
+import QuizCard from '../components/quizCard';
 
 export default function McqQuiz() {
-  const [searchParams, setSearchParams] = useSearchParams();
-  const idParam = searchParams.get('id');
+  const data = quizData.mcqData;
 
-  const [id, setId] = useState(0);
-
-  const [data, setData] = useState<QuestionDataProps[]>([
-    { question: 'loading', answer: -1, choices: [''] },
-  ]);
-
-  const validId = (id: number) => {
-    return id > -1 && id < mcqData.length;
-  };
-
-  useEffect(() => {
-    if (idParam != null) setId(parseInt(idParam));
-    if (validId(id)) {
-      setData(mcqData[id].questions);
-    }
-  });
   return (
     <>
       <nav>
@@ -39,8 +14,19 @@ export default function McqQuiz() {
           <button>Search</button>
         </div>
       </nav>
-      <h2 id='title'>{validId(id) && mcqData[id].title}</h2>
-      {validId(id) ? <Mcq data={data} /> : <div id='mcq'>Quiz not found.</div>}
+      <div className='quizGallery'>
+        {data.map((item, index) => {
+          return (
+            <QuizCard
+              title={item.title}
+              desc={item.desc}
+              imgsrc={item.imgsrc}
+              id={index}
+              type={'mcq'}
+            />
+          );
+        })}
+      </div>
     </>
   );
 }
