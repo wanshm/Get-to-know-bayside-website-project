@@ -3,6 +3,7 @@ import mcqData from '../assets/mcqData.json';
 import { Link } from 'react-router';
 import { useSearchParams } from 'react-router';
 import { useEffect, useState } from 'react';
+import Header from '../components/main/Header';
 
 interface QuestionDataProps {
   question: string;
@@ -32,13 +33,7 @@ export default function McqQuiz() {
   });
   return (
     <>
-      <nav>
-        <Link to={'/'}>Home</Link>
-        <div>
-          <input type='text' placeholder='Search...' />
-          <button>Search</button>
-        </div>
-      </nav>
+      <Header />
       <h2 id='title'>{validId(id) && mcqData[id].title}</h2>
       {validId(id) ? <Mcq data={data} /> : <div id='mcq'>Quiz not found.</div>}
     </>

@@ -18,29 +18,34 @@ export default function App() {
     else alert('Quiz not found.');
   }
 
-  function renderPage() {
-    if (currentPage === 'multiple') return <MultipleChoiceQuiz />;
-    if (currentPage === 'naming') return <NamingQuiz />;
+  // function renderPage() {
+  //   if (currentPage === 'multiple') return <MultipleChoiceQuiz />;
+  //   if (currentPage === 'clicking') return <ClickingQuiz />;
+  //   if (currentPage === 'naming') return <NamingQuiz />;
 
-    return (
-      <div className="home">
-        <h2>Play our Quizzes and Test your knowledge of Bayside High School!</h2>
-        <Gallery />
-      </div>
-    );
-    
-  }
+  // return (
+  // <div className="home">
+  //   <h2>Play our Quizzes and Test your knowledge of Bayside High School!</h2>
+  //   {/* Gallery or other content can go here */}
+  // </div>
+  // );
+  // }
 
   return (
-    <div className="App">
-      <Header 
-        setCurrentPage={setCurrentPage} 
+    <div className='App'>
+      <Header
+        setCurrentPage={setCurrentPage}
         searchTerm={searchTerm}
         setSearchTerm={setSearchTerm}
         handleSearch={handleSearch}
       />
       <main>
-        {renderPage()}
+        <div className='home'>
+          <h2>
+            Play our Quizzes and Test your knowledge of Bayside High School!
+          </h2>
+          {/* Gallery or other content can go here */}
+        </div>
       </main>
       <Footer />
     </div>
