@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import Header from './components/main/Header';
 import Footer from './components/main/footer';
 import MultipleChoiceQuiz from './pages/McqQuiz';
-import ClickingQuiz from './pages/quiz';
 import NamingQuiz from './pages/NamingQuiz';
 import './App.css';
 
@@ -14,11 +13,11 @@ export default function App() {
     e.preventDefault();
     const term = searchTerm.toLowerCase();
     if (term.includes('multiple')) setCurrentPage('multiple');
-    else if (term.includes('clicking')) setCurrentPage('clicking');
     else if (term.includes('naming')) setCurrentPage('naming');
     else alert('Quiz not found.');
   }
 
+<<<<<<< HEAD
   // function renderPage() {
   //   if (currentPage === 'multiple') return <MultipleChoiceQuiz />;
   //   if (currentPage === 'clicking') return <ClickingQuiz />;
@@ -31,6 +30,19 @@ export default function App() {
   // </div>
   // );
   // }
+=======
+  function renderPage() {
+    if (currentPage === 'multiple') return <MultipleChoiceQuiz />;
+    if (currentPage === 'naming') return <NamingQuiz />;
+    
+    return (
+      <div className="home">
+        <h2>Play our Quizzes and Test your knowledge of Bayside High School!</h2>
+        {/* Gallery or other content can go here */}
+      </div>
+    );
+  }
+>>>>>>> refs/remotes/origin/main-page
 
   return (
     <div className='App'>
