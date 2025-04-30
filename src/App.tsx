@@ -17,7 +17,6 @@ export default function App() {
     else alert('Quiz not found.');
   }
 
-<<<<<<< HEAD
   // function renderPage() {
   //   if (currentPage === 'multiple') return <MultipleChoiceQuiz />;
   //   if (currentPage === 'clicking') return <ClickingQuiz />;
@@ -30,19 +29,6 @@ export default function App() {
   // </div>
   // );
   // }
-=======
-  function renderPage() {
-    if (currentPage === 'multiple') return <MultipleChoiceQuiz />;
-    if (currentPage === 'naming') return <NamingQuiz />;
-    
-    return (
-      <div className="home">
-        <h2>Play our Quizzes and Test your knowledge of Bayside High School!</h2>
-        {/* Gallery or other content can go here */}
-      </div>
-    );
-  }
->>>>>>> refs/remotes/origin/main-page
 
   return (
     <div className='App'>
