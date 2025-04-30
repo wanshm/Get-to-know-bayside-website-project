@@ -1,10 +1,15 @@
 import { useState } from 'react';
-import data from "../../assets/namingData.json"
 
-export default function Naming() {
+interface NamingDataProps {
+  answers: string[];
+}
+
+export default function Naming(props: NamingDataProps) {
   const [input, setInput] = useState('');
-  const answers =  data
-  const [revealed, setRevealed] = useState<boolean[]>(new Array (answers.length))
+  const [answers] = useState<string[]>(props.answers);
+  const [revealed, setRevealed] = useState<boolean[]>(
+    new Array(answers.length),
+  );
 
   function won() {
     let count = 0;
@@ -15,12 +20,6 @@ export default function Naming() {
     });
     return count == answers.length;
   }
-
-  // function toNameCase(name: string) {
-  //   const fL = name.substring(0, 1).toUpperCase();
-  //   const rest = name.substring(1).toLowerCase();
-  //   return fL + rest;
-  // }
 
   function handleOnChange(e: React.ChangeEvent<HTMLInputElement>) {
     setInput(e.target.value);

@@ -11,28 +11,16 @@ import Naming from '../components/namingType/Naming';
 //   choices: string[];
 // }
 
-interface McqDataProps {
-  title: string;
-  questions: {
-    question: string;
-    answer: number;
-    choices: string[];
-  }[];
-}
-
-interface NamingDataProps {
-  title: string;
-  answers: string[];
-}
-
 export default function Quiz() {
   const [searchParams, setSearchParams] = useSearchParams();
   const idParam = searchParams.get('id');
   const quizTypeParam = searchParams.get('type');
 
   const [id, setId] = useState(0);
-  const [mcqData, setMcqData] = useState(quizData.mcqData[id].questions);
-  const [namingData, setNamingData] = useState(quizData.namingData[id]);
+  const [mcqData, setMcqData] = useState(quizData.mcqData[0].questions);
+  const [namingData, setNamingData] = useState<string[]>(
+    quizData.namingData[0].answers,
+  );
   const [title, setTitle] = useState('');
 
   const validId = (id: number, maxLength: number) => {
@@ -40,19 +28,18 @@ export default function Quiz() {
   };
 
   useEffect(() => {
-    console.log(idParam);
+    console.log(validId(id, quizData.namingData.length - 1));
     console.log(mcqData);
     if (idParam != null) setId(parseInt(idParam));
-    if (quizTypeParam == 'mcq') {
-      if (validId(id, quizData.mcqData.length)) {
-        setMcqData(quizData.mcqData[id].questions);
-        setTitle(quizData.mcqData[id].title);
-      }
-    } else if (quizTypeParam == 'naming') {
-      if (validId(id, quizData.namingData.length)) {
-        setNamingData(quizData.namingData[id]);
-        setTitle(quizData.namingData[id].title);
-      }
+    if (quizTypeParam == 'mcq' && validId(id, quizData.mcqData.length)) {
+      setMcqData(quizData.mcqData[id].questions);
+      setTitle(quizData.mcqData[id].title);
+    } else if (
+      quizTypeParam == 'naming' &&
+      validId(id, quizData.namingData.length)
+    ) {
+      setNamingData(quizData.namingData[id].answers);
+      setTitle(quizData.namingData[id].title);
     }
   });
   return (
@@ -64,9 +51,9 @@ export default function Quiz() {
           <button>Search</button>
         </div>
       </nav>
-      <h2 id='title'>{}</h2>
+      <h2 id='title'>{title}</h2>
       {quizTypeParam == 'mcq' && <Mcq data={mcqData} />}
-      {quizTypeParam == 'naming' && <Naming />}
+      {quizTypeParam == 'naming' && <Naming answers={namingData} />}
     </>
   );
 }
