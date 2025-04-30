@@ -1,0 +1,48 @@
+.gallery-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 30px;
+  border: 2px solid black;
+  border-radius: 20px;
+  background-color: #f7f7f7;
+  margin: 20px auto;
+  max-width: 1200px;
+}
+
+.quiz-card {
+  background-color: white;
+  border-radius: 12px;
+  border: 1px solid #ccc;
+  padding: 16px;
+  width: 220px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.quiz-card:hover {
+  transform: scale(1.05);
+}
+
+.quiz-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.quiz-info h3 {
+  margin: 12px 0 4px;
+  font-size: 18px;
+  color:orange;
+}
+
+.quiz-info p {
+  margin: 0;
+  font-size: 14px;
+  color: #333;
+}
+
+hr {
+  margin: 12px 0;
+}

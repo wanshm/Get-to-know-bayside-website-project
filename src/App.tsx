@@ -3,6 +3,7 @@ import Header from './components/main/Header';
 import Footer from './components/main/footer';
 import MultipleChoiceQuiz from './pages/McqQuiz';
 import NamingQuiz from './pages/NamingQuiz';
+import Gallery from './components/main/gallery';
 import './App.css';
 
 export default function App() {
@@ -20,13 +21,14 @@ export default function App() {
   function renderPage() {
     if (currentPage === 'multiple') return <MultipleChoiceQuiz />;
     if (currentPage === 'naming') return <NamingQuiz />;
-    
+
     return (
       <div className="home">
         <h2>Play our Quizzes and Test your knowledge of Bayside High School!</h2>
-        {/* Gallery or other content can go here */}
+        <Gallery />
       </div>
     );
+    
   }
 
   return (
