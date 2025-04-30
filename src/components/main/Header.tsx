@@ -1,35 +1,19 @@
-import './header.css';
-
-interface HeaderProps {
-  setCurrentPage: (page: string) => void;
-  searchTerm: string;
-  setSearchTerm: (term: string) => void;
-  handleSearch: (e: React.FormEvent) => void;
-}
-
-export default function Header({ setCurrentPage, searchTerm, setSearchTerm, handleSearch }: HeaderProps) {
+import'./header.css';
+export default function Header() {
   return (
     <header className="header">
       <div className="header-title">
-        <h1><span className="highlight">Get To Know </span>Bayside!</h1>
+        <h1><span className="highlight">Get To know</span>Bayside!</h1>
       </div>
-      
       <nav className="nav-links">
-      <h1><span className="highlight">Quiz </span>Types: </h1>
-        <a onClick={() => setCurrentPage('multiple')}>Multiple Choice</a>
-        <a onClick={() => setCurrentPage('clicking')}>Clicking</a>
-        <a onClick={() => setCurrentPage('naming')}>Naming</a>
+        <a href="#">Quiz Types:</a>
+        <a href="#">Multiple Choice</a>
+        <a href="#">Clicking</a>
+        <a href="#">Naming</a>
       </nav>
-      
-      <form onSubmit={handleSearch} className="search-container">
-        <input
-          type="text"
-          placeholder="Search quiz type..."
-          value={searchTerm}
-          onChange={(e) => setSearchTerm(e.target.value)}
-        />
-        <button type="submit">Search</button>
-      </form>
+      <div className="search-container">
+        <input type="text" placeholder="Search quiz type" />
+      </div>
     </header>
   );
 }

@@ -1,75 +1,58 @@
 .header {
   background-color: #1e3d8f;
   color: white;
-  padding: 10px 20px;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
   align-items: center;
-  width: 100%;
+  padding: 10px 20px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  position: relative;
 }
 
-.nav-links {
-  display: flex;
-  gap: 15px;
-  font-weight: bold;
-  flex: 1;
-  justify-content: space-around;
-  font-size: 14px;
-}
-
-.nav-links a {
-  color: orange;
-  text-decoration: none;
-  cursor: pointer;
-  flex: 1;
-  text-align: center;
-  font-size: 18px;
-}
 
 .header-title h1 {
+  font-size: 24px;
   margin: 0;
   color: orange;
-  flex: 2;
-  text-align: left;
-  font-size: 18px; 
 }
+
 
 .header-title .highlight {
   color: white;
 }
 
-.search-container {
+
+.nav-links {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 6px;
-  padding: 5px;
+  gap: 15px;
+  font-weight: bold;
+  margin: 10px 0;
+  flex-wrap: wrap;
+}
+
+
+.nav-links a {
+  color: orange;
+  text-decoration: none;
+}
+
+
+.nav-links a:first-child {
+  color: white;
+}
+
+
+.search-container {
   background-color: white;
   border-radius: 6px;
-  max-width: 300px;
-  margin-left: 20px;
+  padding: 2px 8px;
+  display: flex;
+  align-items: center;
 }
+
 
 .search-container input {
   border: none;
   outline: none;
-  padding: 5px;
   font-size: 14px;
-  flex: 1;
-}
-
-.search-container button {
-  background-color: #1e3d8f;
-  color: white;
-  border: none;
-  padding: 5px 10px;
-  cursor: pointer;
-  border-radius: 4px;
-  font-size: 14px;
-}
-
-.search-container button:hover {
-  background-color: #1e3d8f;
-  color: white;
 }
