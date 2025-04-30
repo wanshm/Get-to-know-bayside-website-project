@@ -15,9 +15,8 @@ export default function Header({ setCurrentPage, searchTerm, setSearchTerm, hand
       </div>
       
       <nav className="nav-links">
-      <h1><span className="highlight">Quiz </span>Types: </h1>
+        <a onClick={() => setCurrentPage('Home')}>Home</a>
         <a onClick={() => setCurrentPage('multiple')}>Multiple Choice</a>
-        <a onClick={() => setCurrentPage('clicking')}>Clicking</a>
         <a onClick={() => setCurrentPage('naming')}>Naming</a>
       </nav>
       
