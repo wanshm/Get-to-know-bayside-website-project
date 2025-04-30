@@ -44,7 +44,7 @@ export default function App() {
           <h2>
             Play our Quizzes and Test your knowledge of Bayside High School!
           </h2>
-          {/* Gallery or other content can go here */}
+          <Gallery />
         </div>
       </main>
       <Footer />
