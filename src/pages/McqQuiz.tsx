@@ -14,17 +14,19 @@ export default function McqQuiz() {
           <button>Search</button>
         </div>
       </nav>
-      {data.map((item, index) => {
-        return (
-          <QuizCard
-            title={item.title}
-            desc={item.desc}
-            imgsrc={item.imgsrc}
-            id={index}
-            type={'mcq'}
-          />
-        );
-      })}
+      <div className='quizGallery'>
+        {data.map((item, index) => {
+          return (
+            <QuizCard
+              title={item.title}
+              desc={item.desc}
+              imgsrc={item.imgsrc}
+              id={index}
+              type={'mcq'}
+            />
+          );
+        })}
+      </div>
     </>
   );
 }

@@ -55,3 +55,18 @@ nav {
 #title {
   padding-left: 200px;
 }
+
+.quizGallery {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.quizCard {
+  border: solid 1px black;
+  border-radius: 15px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
