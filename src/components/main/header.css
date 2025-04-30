@@ -1,58 +1,75 @@
 .header {
   background-color: #1e3d8f;
   color: white;
-  display: flex;
-  align-items: center;
   padding: 10px 20px;
+  display: flex;
+  flex-direction: row;
   justify-content: space-between;
-  flex-wrap: wrap;
-  position: relative;
+  align-items: center;
+  width: 100%;
 }
-
-
-.header-title h1 {
-  font-size: 24px;
-  margin: 0;
-  color: orange;
-}
-
-
-.header-title .highlight {
-  color: white;
-}
-
 
 .nav-links {
   display: flex;
   gap: 15px;
   font-weight: bold;
-  margin: 10px 0;
-  flex-wrap: wrap;
+  flex: 1;
+  justify-content: space-around;
+  font-size: 14px;
 }
-
 
 .nav-links a {
   color: orange;
   text-decoration: none;
+  cursor: pointer;
+  flex: 1;
+  text-align: center;
+  font-size: 18px;
 }
 
+.header-title h1 {
+  margin: 0;
+  color: orange;
+  flex: 2;
+  text-align: left;
+  font-size: 18px; 
+}
 
-.nav-links a:first-child {
+.header-title .highlight {
   color: white;
 }
 
-
 .search-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  padding: 5px;
   background-color: white;
   border-radius: 6px;
-  padding: 2px 8px;
-  display: flex;
-  align-items: center;
+  max-width: 300px;
+  margin-left: 20px;
 }
-
 
 .search-container input {
   border: none;
   outline: none;
+  padding: 5px;
   font-size: 14px;
+  flex: 1;
+}
+
+.search-container button {
+  background-color: #1e3d8f;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.search-container button:hover {
+  background-color: #1e3d8f;
+  color: white;
 }
