@@ -1,6 +1,6 @@
 import quizData from '../assets/quizData.json';
 import { Link } from 'react-router';
-import QuizCard from '../components/quizCard';
+import QuizCard from '../components/QuizCard';
 
 export default function McqQuiz() {
   const data = quizData.mcqData;
