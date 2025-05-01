@@ -55,7 +55,9 @@ nav {
   padding-left: 200px;
 }
 
-html, body, #root {
+html,
+body,
+#root {
   height: 100%;
   margin: 0;
   font-family: Arial, sans-serif;
@@ -91,7 +93,6 @@ html, body, #root {
   animation: fadeIn 1.5s ease-out;
 }
 
-
 main {
   flex: 1;
   padding: 20px;
@@ -116,3 +117,17 @@ footer .footer-text {
   margin-left: 10px;
 }
 
+.quizGallery {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.quizCard {
+  border: solid 1px black;
+  border-radius: 15px;
+}
+/* 
+a {
+  text-decoration: none;
+  color: black;
+} */

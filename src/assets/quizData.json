@@ -1,45 +1,66 @@
 {
-    "mcqData":[
+  "mcqData": [
+    {
+      "title": "Placeholder Quiz",
+      "imgsrc": "",
+      "desc": "",
+      "questions": [
+        { "question": "1+1 = ?", "answer": 1, "choices": ["2", "4", "5", "3"] },
         {
-          "title": "Placeholder Quiz",
-          "questions": [
-            { "question": "1+1 = ?", "answer": 1, "choices": ["2", "4", "5", "3"] },
-            {
-              "question": "who is a math teacher?",
-              "answer": 3,
-              "choices": ["Mrs. Hudson", "Mr. Herman", "Mr. Boccuzza", "Mrs. Aminov"]
-            }
-          ]
-        },
-        {
-          "title": "Placeholder Quiz 2",
-          "questions": [
-            { "question": "1+1 = ?", "answer": 1, "choices": ["2", "4", "5", "3"] },
-            {
-              "question": "who is a math teacher?",
-              "answer": 3,
-              "choices": ["Mrs. Hudson", "Mr. Herman", "Mr. Boccuzza", "Mrs. Aminov"]
-            }
-          ]
-        },
-        {
-          "title": "Placeholder Quiz 3",
-          "questions": [
-            { "question": "1+1 = ?", "answer": 1, "choices": ["2", "4", "5", "3"] },
-            {
-              "question": "who is a math teacher?",
-              "answer": 3,
-              "choices": ["Mrs. Hudson", "Mr. Herman", "Mr. Boccuzza", "Mrs. Aminov"]
-            }
+          "question": "who is a math teacher?",
+          "answer": 3,
+          "choices": [
+            "Mrs. Hudson",
+            "Mr. Herman",
+            "Mr. Boccuzza",
+            "Mrs. Aminov"
           ]
         }
       ]
-      ,
-      "namingData": [{
-        "title":"placeholder",
-        "answers":
-        [
-            "apple","banana","pear"
-        ]
-    }]
+    },
+    {
+      "title": "Placeholder Quiz 2",
+      "imgsrc": "",
+      "desc": "",
+      "questions": [
+        { "question": "1+1 = ?", "answer": 1, "choices": ["2", "4", "5", "3"] },
+        {
+          "question": "who is a math teacher?",
+          "answer": 3,
+          "choices": [
+            "Mrs. Hudson",
+            "Mr. Herman",
+            "Mr. Boccuzza",
+            "Mrs. Aminov"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Placeholder Quiz 3",
+      "imgsrc": "",
+      "desc": "",
+      "questions": [
+        { "question": "1+1 = ?", "answer": 1, "choices": ["2", "4", "5", "3"] },
+        {
+          "question": "who is a math teacher?",
+          "answer": 3,
+          "choices": [
+            "Mrs. Hudson",
+            "Mr. Herman",
+            "Mr. Boccuzza",
+            "Mrs. Aminov"
+          ]
+        }
+      ]
+    }
+  ],
+  "namingData": [
+    {
+      "title": "placeholder",
+      "imgsrc": "",
+      "desc": "",
+      "answers": ["apple", "banana", "pear"]
+    }
+  ]
 }
