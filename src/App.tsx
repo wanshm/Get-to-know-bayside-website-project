@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import Header from './components/main/Header';
 import Footer from './components/main/footer';
-import MultipleChoiceQuiz from './pages/McqQuiz';
-import NamingQuiz from './pages/NamingQuiz';
 import Gallery from './components/main/gallery';
 import './App.css';
 
