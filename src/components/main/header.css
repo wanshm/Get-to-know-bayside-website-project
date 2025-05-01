@@ -21,9 +21,9 @@
 
 .nav-links {
   display: flex;
-  gap: 40px; /* spacing between nav items */
+  gap: 40px; 
   font-weight: bold;
-  font-size: 20px; /* increase size */
+  font-size: 20px; 
   flex: 1;
   justify-content: center;
 }
