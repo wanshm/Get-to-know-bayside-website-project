@@ -37,28 +37,31 @@ export default function Naming(props: NamingDataProps) {
   }
   return (
     <div>
-      <input
-        type='text'
-        value={input}
-        onChange={(e) => {
-          handleOnChange(e);
-        }}
-      />
-      {answers.map((answer, key) => {
-        return (
-          <div
-            key={key}
-            // className={revealed[key] ? 'revealed':'concealed' } currently needs styling to work
-          >
-            <p>{revealed[key] ? answer : '?'}</p>
+      <div id='naming'>
+        <input
+          placeholder='Type your guess here...'
+          type='text'
+          value={input}
+          onChange={(e) => {
+            handleOnChange(e);
+          }}
+        />
+        {answers.map((answer, key) => {
+          return (
+            <div
+              key={key}
+              // className={revealed[key] ? 'revealed':'concealed' } currently needs styling to work
+            >
+              <p>{revealed[key] ? answer : '?'}</p>
+            </div>
+          );
+        })}
+        {won() && (
+          <div>
+            <h1>You win!!</h1>
           </div>
-        );
-      })}
-      {won() && (
-        <div>
-          <h1>You win!!</h1>
-        </div>
-      )}
+        )}
+      </div>
     </div>
   );
 }

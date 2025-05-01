@@ -28,6 +28,14 @@ nav {
   margin: 0 auto;
 }
 
+#naming {
+  border: solid 1px black;
+  border-radius: 15px;
+  padding: 25px;
+  max-width: 60%;
+  margin: 0 auto;
+}
+
 #mcq #buttonPanel {
   display: grid;
   grid-template: auto auto / auto auto;
