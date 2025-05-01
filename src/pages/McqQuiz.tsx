@@ -1,23 +1,20 @@
 import quizData from '../assets/quizData.json';
-import { Link } from 'react-router';
 import QuizCard from '../components/QuizCard';
+import Header from '../components/main/Header';
+import Footer from '../components/main/footer';
 
 export default function McqQuiz() {
   const data = quizData.mcqData;
 
   return (
     <>
-      <nav>
-        <Link to={'/'}>Home</Link>
-        <div>
-          <input type='text' placeholder='Search...' />
-          <button>Search</button>
-        </div>
-      </nav>
+      <Header />
+      <h1>All the Mcq Quizzes: </h1>
       <div className='quizGallery'>
         {data.map((item, index) => {
           return (
             <QuizCard
+              key={index}
               title={item.title}
               desc={item.desc}
               imgsrc={item.imgsrc}
@@ -27,6 +24,7 @@ export default function McqQuiz() {
           );
         })}
       </div>
+      <Footer />
     </>
   );
 }

@@ -13,8 +13,11 @@ export default function QuizCard(props: QuizCardProps) {
     <Link to={'/quiz?id=' + props.id + '&type=' + props.type}>
       <div className='quizCard'>
         <img src={props.imgsrc} alt='quiz image' />
-        <h3>{props.title}</h3>
-        <p>{props.desc}</p>
+        <hr />
+        <div className='quizCardText'>
+          <h3>{props.title}</h3>
+          <p>{props.desc}</p>
+        </div>
       </div>
     </Link>
   );

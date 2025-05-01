@@ -4,6 +4,8 @@ import { Link } from 'react-router';
 import { useSearchParams } from 'react-router';
 import { useEffect, useState } from 'react';
 import Naming from '../components/namingType/Naming';
+import Header from '../components/main/Header';
+import Footer from '../components/main/footer';
 
 // interface QuestionDataProps {
 //   question: string;
@@ -44,16 +46,11 @@ export default function Quiz() {
   });
   return (
     <>
-      <nav>
-        <Link to={'/'}>Home</Link>
-        <div>
-          <input type='text' placeholder='Search...' />
-          <button>Search</button>
-        </div>
-      </nav>
+      <Header />
       <h2 id='title'>{title}</h2>
       {quizTypeParam == 'mcq' && <Mcq data={mcqData} />}
       {quizTypeParam == 'naming' && <Naming answers={namingData} />}
+      <Footer />
     </>
   );
 }
